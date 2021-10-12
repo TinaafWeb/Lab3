@@ -18,6 +18,7 @@ namespace Lab3.Controllers
         [HttpPost]
         public IActionResult Count()
         {
+           ViewData["Bottles"] =  Request.Form["Bottles"];
             // you will complete 
             return View();
         }
