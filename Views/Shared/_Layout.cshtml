@@ -3,3 +3,46 @@
 *@
 @{
 }
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        @ViewBag.title
+        <h1>Welcome to my Webpage</h1>
+        <h3>My name is: Afshar, Maryam</h3>
+
+        <br />
+        <br />
+        @Html.ActionLink("Home", "Index", "Home")&nbsp;
+        @Html.ActionLink("Show the song", "Razor", "Home") &nbsp;
+        @Html.ActionLink("Persons", "CreatePerson", "Home")&nbsp;
+
+    </header>
+    <div class="content">
+
+        @RenderBody()
+    </div>
+    <footer>
+        <p>
+            a.Short description of what layout does? </br>
+            A Layout file allows us to reuse portions of View content (common elements) instead of implementing the visual elements on every page.
+            By using Layout we Use common components, Share directives, and run common code before rendering pages or views.
+        </p>
+        <p>
+            b.Why you put the files in those directories. E.g. CSS in directory x, and why. Layout in directory Y and why. Etc?</br>
+            By convention, the default layout for an ASP.NET Core app is named _Layout.cshtml and usually is placed under ‘Views/Shared’ folder.
+            CSS is located in wwwwroot folder which most of the static files are inside it.
+        </p>
+
+
+    </footer>
+</body>
+</html>
